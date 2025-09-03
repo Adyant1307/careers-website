@@ -10,25 +10,33 @@
       #banner{
         width: 100%;
         height: 360px;
+        object-fit: cover;
+        margin-bottom: 16px;
       }
     </style>
     
   </head>
   <body>  
     {% include 'nav.html' %}
+    <img class= "img-fluid" id = "banner"  src="https://9104379a-16f5-48e3-a229-aa693110170e-00-3ep9a72r3q8ig.sisko.replit.dev/static/banner.jpg" >
     <div class="container">
       
       <h1 class = "text-center mt-2 mb-4">MyCareer</h1>
-      <img class= "img-fluid" id = "banner"  src="https://9104379a-16f5-48e3-a229-aa693110170e-00-3ep9a72r3q8ig.sisko.replit.dev/static/banner.jpg" >
-      <h2  class= "text-center mt-2 mb-4">About Mycareer</h2>
+      
+     <div class = "row" style= "margin-bottom: 16px;">
+       <div class = "col-md-6">
       <p class = "lead"> We believe that finding the right career should be simple, transparent, and empowering. Our platform connects job seekers with opportunities that match their skills, aspirations, and         passions, while helping companies discover the talent they need to grow.
-  
+     
           At CareerPath, we go beyond just job listings. We provide resources to help you prepare, learn, and succeed – from resume tips to interview guidance, and skill-building         opportunities.Whether you’re starting your journey, switching paths, or aiming higher, we’re here to support every step of your career.
   
         Our mission is clear: to bridge the gap between talent and opportunity.
   
         Join us today and take your next step toward success. </p> 
-      
+       </div>
+       <div class = "col-6">
+       <img src = "/static/people.jpg" style = "height: 320px; border-radius: 4px;">
+       </div>
+     </div>
       <h2 class= "text-center mt-2 mb-4">Open Posistions</h2>
         
         <div>
@@ -37,9 +45,10 @@
           {%endfor%}
         </div>
           <div class="text-center">
-            <button class="btn btn-primary btn-lg">Contact Us</button>
-            <p>Copyright 2025, Adyant</p>    
+            <a class="btn btn-primary btn-lg" href="mailto:hello@adyant.ai?subject=Contact%20Us&body=My%20name%3A%3Cyour%20name%20here%3E%0D%0AMy%2">Contact Us</a>
+                
           </div>
     </div>
+    {% include 'footer.html' %}
   </body>
 </html>
